@@ -13,6 +13,7 @@ it will output:
 '''
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
@@ -40,13 +41,10 @@ for state in states:
 df_sorted = df_state_means.sort_values(by=['adj'], ascending=False)
 print(df_sorted)
 ax = df_sorted.sort_values(by=['adj'], ascending=False).plot.bar(figsize = (12,4))
-ax.plot
+plt.show()
 
 
 df_ss_hospitalize = df[df['Measure Code'] == 521]
 df_ss_outpatient = df[df['Measure Code'] == 522]
 df_ls_hospitalize = df[df['Measure Code'] == 551]
 df_ls_outpatient = df[df['Measure Code'] == 552]
-
-
-# In[ ]:
